@@ -23,7 +23,8 @@ var c = function(a, b, c) {
   }
   f(a,b,c);
   console.log(b);
-}                                   //x = 1
+}                                  
+ //x = 1
 
 c(8,9,10);
 console.log(b);
@@ -32,7 +33,7 @@ console.log(x);
 
 ```javascript
 console.log(bar); //undefined
-console.log(baz); //undefined
+console.log(baz); //2
 foo(); // hola
 function foo() { console.log('Hola!'); }
 var bar = 1;
@@ -62,7 +63,7 @@ console.log(instructor);      //Tony
 ```javascript
 var instructor = "Tony";
 let pm = "Franco";
-if (true) {
+  if (true) {
     var instructor = "The Flash";  
     let pm = "Reverse Flash";
     console.log(instructor);           //The flash
@@ -152,7 +153,8 @@ console.log(obj.prop.getFullname());
 
 var test = obj.prop.getFullname;
 
-console.log(test()); // la variable test es asignada con un acceso a la propiedad getFullname pero no llama a la funcion, por ende, el this.fullname toma a la variable global fullname equivalente a Juan Perez y lo muestra
+console.log(test()); 
+// la variable test es asignada con un acceso a la propiedad getFullname pero no llama a la funcion, por ende, el this.fullname toma a la variable global fullname equivalente a Juan Perez y lo muestra
 ```
 
 ### Event loop

@@ -64,9 +64,12 @@ var creaFuncion = function(){
 
 var arr = creaFuncion();
 
-arr[0]() // 3 sale un 3, qué esperaban ustedes??
-arr[1]() // 3
-arr[2]() // 3
+arr[0]()
+ // 3 sale un 3, qué esperaban ustedes??
+arr[1]() 
+// 3
+arr[2]()
+ // 3
 ```
 
 ¿Porqué el console log da todos `3`?
