@@ -1,5 +1,8 @@
 'use strict'
 
+const { EleventyServerlessBundlerPlugin } = require("@11ty/eleventy");
+const { queue } = require("@11ty/eleventy-cache-assets");
+
 /*
 Definir las funciones recursivas nFactorial y nFibonacci.
 
@@ -15,9 +18,20 @@ Como ejercicio adicional y completamente opcional, al terminar de resolver este 
 */
 
 function nFactorial(n) {
+  if(n < 0 ) return "no se puede obtener el factorial de numeros negativos."
+ if(n === 0 || n === 1) return 1 
+ return n * nFactorial(n-1)
 }
 
+
 function nFibonacci(n) {
+  if (n === 0 )  return 0
+  if (n === 1 )  return 1
+return nFibonacci(n-2) + nFibonacci(n-1)
+
+
+    
+  
 }
 
 /*
@@ -29,9 +43,21 @@ Implementar la clase Queue, sabiendo que es una estructura de tipo FIFO, donde e
 Pueden utilizar class o función constructora.
 */
 
-function Queue() {
+ function Queue() {
+   this.array = []
+ }
+ Queue.prototype.enqueue = function(value){
+   this.array.push(value);
+ }
+ Queue.prototype.dequeue = function(){
+   return this.array.shift();
+ }
+ 
+ Queue.prototype.size = function(){
+   return this.array.length;
+ }
 
-}
+
 
 // No modifiquen nada debajo de esta linea
 // --------------------------------
